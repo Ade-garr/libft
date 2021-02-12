@@ -6,7 +6,7 @@
 /*   By: ade-garr <ade-garr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 16:54:12 by ade-garr          #+#    #+#             */
-/*   Updated: 2021/02/12 16:00:50 by ade-garr         ###   ########.fr       */
+/*   Updated: 2021/02/12 16:18:38 by ade-garr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while ((*lst))
 	{
 		if (del != NULL)
+		{
 			del((*lst)->content);
+			(*lst)->content = NULL;
+		}
 		t = *lst;
 		*lst = (*lst)->next;
 		free(t);
