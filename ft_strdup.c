@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ade-garr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ade-garr <ade-garr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 16:15:39 by ade-garr          #+#    #+#             */
-/*   Updated: 2019/11/12 16:22:39 by ade-garr         ###   ########.fr       */
+/*   Updated: 2021/03/28 13:34:35 by ade-garr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ static void	ft_strcpy(char *dest, const char *src)
 	int i;
 
 	i = 0;
-	while (src[i])
+	if (src != NULL)
 	{
-		dest[i] = src[i];
-		i++;
+		while (src[i])
+		{
+			dest[i] = src[i];
+			i++;
+		}
 	}
 	dest[i] = '\0';
 }
