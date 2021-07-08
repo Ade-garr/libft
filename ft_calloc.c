@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ade-garr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ade-garr <ade-garr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 15:49:46 by ade-garr          #+#    #+#             */
-/*   Updated: 2019/11/12 16:12:57 by ade-garr         ###   ########.fr       */
+/*   Updated: 2021/07/08 13:37:21 by ade-garr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	i;
 
 	i = 0;
-	if (!(s = malloc(size * nmemb)))
+	s = malloc(size * nmemb);
+	if (s == NULL)
 		return (NULL);
 	while (i < size * nmemb)
 	{
